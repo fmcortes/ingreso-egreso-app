@@ -59,9 +59,21 @@
                   class="btn btn-primary submit-btn btn-block"
                   type="submit"
                   [disabled]="registroForm.invalid"
+                  *ngIf="!isLoading"
                 >
                   Crear cuenta
                 </button>
+
+                <button
+                class="btn btn-primary submit-btn btn-block"
+                type="submit"
+                [disabled]="true"
+                *ngIf="isLoading"
+              >
+                <i class="fa fa-spin fa-sync"></i>
+                Loading...
+              </button>
+
               </div>
               <div class="text-block text-center my-3">
                 <span class="text-small font-weight-semibold">ya tienes una cuenta?</span>
